@@ -54,6 +54,9 @@ group :development do
 
   # Console runtime para Rails e alternativa para IRB
   gem 'pry-rails'
+
+  # Spinner para tornar espera por tasks mais agradáveis
+  gem 'tty-spinner'
 end
 
 group :test do
