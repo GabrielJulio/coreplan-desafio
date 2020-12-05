@@ -1,24 +1,42 @@
-# README
+# Seja bem-vindo!
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### Requisitos
+- Ruby 2.7.2
+- Docker
 
-Things you may want to cover:
+### Como executar (Primeira vez)
+1. Clone o projeto
+1. Entre na pasta do projeto e execute: 
+    - **OBS: Recomendamos que faça um café :coffee: enquanto as gems :gem: são baixadas e instaladas**
+    ```bash
+    docker-compose build
+    ```
+1. Agora é só executar e a aplicação estará ordando em ``localhost:3000``:
+    ```bash
+    docker-compose up
+    ```
 
-* Ruby version
+### Comandos
+- Para iniciar a aplicação execute: 
+    ```bash
+    docker-compose up
+    ```
+- Para encerrar a aplicação execute: 
+    ```bash
+    docker-compose down
+    ```
+- Para executar um comando com rails execute: 
+    ```bash
+    docker-compose run app rails <comando>
+    ```
+- Quer instalou novas gems? Refaça o build.
+    ```bash
+    docker-compose build
+    ```
 
-* System dependencies
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### Banco de Dados
+- Preparação para Desenvolvimento:
+    ```bash
+    rails dev:setup
+    ```
