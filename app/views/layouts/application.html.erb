@@ -21,6 +21,14 @@
     
     <main>
       <div class="container">
+        <% if notice %>
+          <div class="row"></div>
+          <div class="row center">
+              <div id="notice" class="card col s4 offset-s4 center green lighten-5">
+                  <h5 class="green-text"><%= notice %></h5>
+              </div>
+          </div>
+        <% end %>
         <%= yield %>
       </div>
     </main>

@@ -2,11 +2,11 @@
     <div class="navbar-fixed">
         <nav class="blue darken-1">
             <div class="nav-wrapper">
-                <ul class="left">
+                <ul class="right">
                     <% if current_user %>
                     <li class="sidenav-trigger" data-target="slide-account">
-                        <a href="#" class="btn-small cyan darken-1">
-                            <%= t(:welcome) %> <b><%= current_user.nickname %></b>!
+                        <a href="#" class="btn-small grey darken-4">
+                            <i class="material-icons">menu</i>
                         </a>
                     </li>
                 <% else %>
@@ -17,20 +17,15 @@
                         <i class="material-icons left">supervisor_account</i> <%= t(:sign_in) %>
                     <% end %></li>
                 <% end %>
-
+                    <li class="sidenav-trigger hide-on-large-only" data-target="slide-account">
+                        <a href="#" class="btn-small grey darken-4">
+                            <i class="material-icons">menu</i>
+                        </a>
+                    </li>
                 </ul>
                 <%= link_to root_path, :class => 'brand-logo center' do %>
                     <i class="material-icons">message</i><%= app_name %>
                 <% end %>
-                <a href="#" data-target="slide-account" class="sidenav-trigger right">
-                    <i class="material-icons">menu</i>
-                </a>
-                <ul class="right hide-on-med-and-down">
-                    <li><a href="#"><i class="material-icons">search</i></a></li>
-                    <li><%= link_to '' do %>
-                        <i class="material-icons">refresh</i>
-                    <% end %></li>
-                </ul>
             </div>
         </nav>
     </div>
@@ -66,13 +61,7 @@
             <li><%= link_to destroy_user_session_path, :class => 'waves-effect' do %>
                 <i class="material-icons">directions_walk</i><%= t(:sign_out) %>
             <% end %></li>
-            <li><div class="divider"></div></li>
-        <% end %>
-        <li><a href="#"><i class="material-icons">search</i><%= t(:search) %></a></li>
-        <li><%= link_to '' do %>
-            <i class="material-icons">refresh</i><%= t(:refresh) %>
-        <% end %></li>
-        <% unless current_user %>
+        <% else %>
             <li><%= link_to new_user_session_path do %>
                 <i class="material-icons">supervisor_account</i> <%= t(:sign_in) %>
             <% end %></li>
@@ -81,11 +70,11 @@
             <% end %></li>
         <% end %>
         <div class="divider"></div>
-        <li><a class='dropdown-trigger btn' href='#' data-target='languages'><%= t(:languages) %></a></li>
+        <li><a class='dropdown-trigger btn grey darken-4' href='#' data-target='languages'><%= t(:languages) %></a></li>
 
         <ul id='languages' class='dropdown-content'>
-            <li><%= link_to 'Português', root_path(locale: 'pt-BR') %></li>
-            <li><%= link_to 'English', root_path(locale: 'en') %></li>
+            <li><%= link_to 'Português', url_for(locale: 'pt-BR') %></li>
+            <li><%= link_to 'English', url_for(locale: 'en') %></li>
         </ul>
 
     </ul>

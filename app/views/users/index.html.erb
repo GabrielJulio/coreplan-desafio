@@ -1,35 +1,49 @@
-<h5 id="notice red"><%= notice %></h5>
-
-<h1>Users</h1>
-
-<table>
-  <thead>
-    <tr>
-      <td><b>Nickname</b></td>
-      <% if current_user %>
-        <td><b>Full Name</b></td>
-        <td><b>Age</b></td>
-        <td><b>Gender</b></td>
-      <% end %>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @users.each do |user| %>
-      <tr>
-        <td><%= user.nickname %></td>
-        <% if current_user %>
-          <td><%= user.full_name %></td>
-          <td><%= user.birth_date %></td>
-          <td><%= user.gender %></td>
-        <% end %>
-        <td><%= link_to 'Profile Page', user_path(user.nickname) %></td>
-      </tr>
+<nav class="blue">
+  <div class="nav-wrapper">
+    <%= form_tag users_path, method: :get do %>
+      <div class="input-field">
+        <%= search_field_tag 'search', nil, placeholder: t(:type_a_name_or_nickname) %>
+        <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+        <i class="material-icons">close</i>
     <% end %>
-  </tbody>
-</table>
+  </div>
+</nav>
 
-<br>
+<div class="row"></div>
 
-<%= link_to t(:back), :back, :class => 'btn red lighten-1 right' %>
+<% if @users && @users.any? %>
+  <table>
+    <thead>
+      <tr>
+        <% if current_user %>
+          <td class="center"><b><%= t(:full_name) %></b></td>
+        <% end %>
+        <td class="center"><b><%= t(:nickname) %></b></td>
+      </tr>
+    </thead>
+
+    <tbody class="collection">
+      <% @users.each do |user| %>
+        <tr class="collection-item">
+          <% if current_user %>
+            <td class="center">
+              <b><%= link_to user.full_name, user_path(user.nickname), :class => 'cyan-text' %></b>
+            </td>
+          <% end %>
+          <td class="center">
+            <b><%= link_to user.nickname, user_path(user.nickname), :class => 'cyan-text' %></b>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+<% end %>
+
+<% if @users && @users.empty? %>
+  <div class="row"></div>
+  <div class="row center">
+    <div id="notice" class="card col s4 offset-s4 center yellow lighten-5">
+      <h5 class="yellow-text text-darken-3">Ninguém encontrado</h5>
+    </div>
+  </div>
+<% end %>
