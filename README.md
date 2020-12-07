@@ -42,8 +42,8 @@
     ```
 
 ### Imagens
-<img src="https://github.com/GabrielJulio/coreplan-desafio/blob/master/repo_images/main_screen.jpg" width="800" height="500"/>
-<img src="https://github.com/GabrielJulio/coreplan-desafio/blob/master/repo_images/login_screen.jpg" width="800" height="500"/>
-<img src="https://github.com/GabrielJulio/coreplan-desafio/blob/master/repo_images/no_avatar.jpg" width="800" height="500"/>
-<img src="https://github.com/GabrielJulio/coreplan-desafio/blob/master/repo_images/search_with_avatar.jpg" width="800" height="500"/>
-<img src="https://github.com/GabrielJulio/coreplan-desafio/blob/master/repo_images/errors.png" width="800" height="500"/>
+![Main Screen]("https://github.com/GabrielJulio/coreplan-desafio/blob/master/repo_images/main_screen.jpg")
+![Login Screen](https://github.com/GabrielJulio/coreplan-desafio/blob/master/repo_images/login_screen.jpg)
+![No Avatar](https://github.com/GabrielJulio/coreplan-desafio/blob/master/repo_images/no_avatar.jpg")
+![Search with Avatar](https://github.com/GabrielJulio/coreplan-desafio/blob/master/repo_images/search_with_avatar.jpg")
+![Errors](https://github.com/GabrielJulio/coreplan-desafio/blob/master/repo_images/errors.png")
