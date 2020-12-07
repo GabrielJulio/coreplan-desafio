@@ -4,7 +4,11 @@ class UsersController < ApplicationController
   # GET /users
   # GET /users.json
   def index
-    @users = User.all
+    if params[:search].present?
+      @users = User.where('full_name LIKE :query OR nickname LIKE :query', query: "%#{params[:search]}%")
+    else
+      nil
+    end
   end
 
   # GET /users/1
@@ -69,6 +73,6 @@ class UsersController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def user_params
-      params.fetch(:user, {})
+      params.fetch(:user, {}).permit(:search)
     end
 end
