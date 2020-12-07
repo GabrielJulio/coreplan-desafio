@@ -1,6 +1,6 @@
 # Additional translations at https://github.com/heartcombo/devise/wiki/I18n
 
-en:
+pt-BR:
   devise:
     confirmations:
       confirmed: "Seu email foi confirmado com sucesso."
@@ -46,7 +46,7 @@ en:
       updated: "Sua conta foi atualizada com sucesso."
       updated_but_not_signed_in: "Sua conta foi atualziada com sucesso, mas sua senha foi alterada, por favor se autentique novamente"
     sessions:
-      signed_in: "Atutenticado com sucesso."
+      signed_in: "Autenticado com sucesso."
       signed_out: "Você saiu com sucesso."
       already_signed_out: "Você saiu com sucesso."
     unlocks:

@@ -24,7 +24,7 @@ class User < ApplicationRecord
 
   def minimum_age
     if birth_date.present? && birth_date > 16.years.ago.to_date
-      errors.add(:birth_date, 'You should be over 16 years old.')
+      errors.add(:birth_date, :minimum_age)
     end
   end
 

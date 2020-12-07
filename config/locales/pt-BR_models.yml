@@ -16,3 +16,9 @@ pt-BR:
         current_password: Senha atual
         updated_at: Atualizado em
         created_at: Cadastrado em
+    errors:
+      models:
+        user:
+          attributes:
+            birth_date:
+              minimum_age: Você deve ter pelo menos 16 anos

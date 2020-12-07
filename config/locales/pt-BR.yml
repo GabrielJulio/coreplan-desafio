@@ -20,3 +20,8 @@ pt-BR:
   home_page: Página Inicial
   remember_me: Lembrar-me
   forgot_password: Esqueceu sua senha?
+  update: Atualizar
+  back: Voltar
+  errors:
+      messages:
+        not_saved: Não deu pra salvar :(
