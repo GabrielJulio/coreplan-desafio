@@ -1,17 +1,17 @@
 # Seja bem-vindo!
 
 ### Requisitos
-- Ruby 2.7.2
 - Docker
+- Ruby 2.7.2 (instalado pelo Docker)
 
-### Como executar (Primeira vez)
+### Como executar
 1. Clone o projeto
 1. Entre na pasta do projeto e execute: 
     - **OBS: Recomendamos que faça um café :coffee: enquanto as gems :gem: são baixadas e instaladas**
     ```bash
     docker-compose build
     ```
-1. Agora é só executar e a aplicação estará ordando em ``localhost:3000``:
+1. Agora é só executar e a aplicação estará rodando em ``localhost:3000``:
     ```bash
     docker-compose up
     ```
@@ -40,3 +40,10 @@
     ```bash
     rails dev:setup
     ```
+
+### Imagens
+<img src="https://github.com/GabrielJulio/coreplan-desafio/blob/repo_images/main_screen.jpg" width="800" height="500"/>
+<img src="https://github.com/GabrielJulio/coreplan-desafio/blob/repo_images/login_screen.jpg" width="800" height="500"/>
+<img src="https://github.com/GabrielJulio/coreplan-desafio/blob/repo_images/no_avatar.jpg" width="800" height="500"/>
+<img src="https://github.com/GabrielJulio/coreplan-desafio/blob/repo_images/search_with_avatar.jpg" width="800" height="500"/>
+<img src="https://github.com/GabrielJulio/coreplan-desafio/blob/repo_images/errors.jpg" width="800" height="500"/>

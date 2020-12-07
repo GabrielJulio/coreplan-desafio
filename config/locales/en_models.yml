@@ -16,3 +16,9 @@ pt-BR:
         current_password: Current password
         updated_at: updated at
         created_at: created at
+  erros:
+    models:
+      user:
+        attributes:
+          birth:
+            minimum_age: You must be at least 16 years old.

@@ -3,7 +3,7 @@ en:
   languages: languages
   password_hint: leave it blank if you don't want to change it
   password_minimum: caracteres no mínimo
-  confirm_password_hint: nós precisamos da sua senha atual para confirmar as alterações
+  confirm_password_hint: we need your password to approve the changes
   welcome: Welcome
   my_account: My Profile
   search: Search
@@ -17,3 +17,5 @@ en:
   home_page: Home Page
   forgot_password: Forgot your password?
   type_a_name_or_nickname: Type a name or nickname
+  login: Nickname or Email
+  update: Update
