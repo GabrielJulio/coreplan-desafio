@@ -1,0 +1,33 @@
+<h2 class="center"><%= t(:sign_in) %></h2>
+
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <div class="field">
+    <%= f.label t(:login) %><br />
+    <%= f.text_field :login, autofocus: true, autocomplete: "email" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password %><br/>
+    <%= f.password_field :password, autocomplete: "current-password" %>
+  </div>
+
+  <% if devise_mapping.rememberable? %>
+    <label class="field right">
+      <%= f.check_box :remember_me  %>
+      <span> <%= t(:remember_me) %> </span>
+    </label>
+  <% end %>
+  <div class="row"></div>
+
+  <div class="row">
+    <%= f.submit t(:sign_in), :class => 'btn col s2' %>
+
+    <%- if devise_mapping.registerable? && controller_name != 'registrations' %>
+      <%= link_to t(:sign_up), new_registration_path(resource_name), :class => 'btn col s4 offset-s1 blue lighten-1' %>
+    <% end %>
+
+    <%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
+      <%= link_to t(:forgot_password), new_password_path(resource_name), :class => 'btn col s4 offset-s1 red lighten-1'%>
+    <% end %>
+  </div>
+<% end %>

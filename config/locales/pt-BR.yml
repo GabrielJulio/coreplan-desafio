@@ -1,0 +1,38 @@
+pt-BR:
+  app_description: Você pode fazer pergunta aos outros anônimamente.
+  languages: línguas
+  neutral: Neutro
+  male: Masculino
+  female: Feminino
+  password_hint: deixe em branco se não quiser alterar
+  password_minimum: caracteres no mínimo
+  confirm_password_hint: nós precisamos da sua senha atual para confirmar as alterações
+  welcome: Bem-vindo(a)
+  my_account: Meu Perfil
+  search: Pesquisar
+  refresh: Atualizar
+  my_questions: Minhas Perguntas
+  feedback: Feedback
+  edit_account: Editar Perfil
+  sign_in: Entrar
+  sign_up: Cadastrar-se
+  sign_out: Sair
+  home_page: Página Inicial
+  remember_me: Lembrar-me
+  forgot_password: Esqueceu sua senha?
+  update: Atualizar
+  back: Voltar
+  users: Usuários
+  full_name: Nome Completo
+  nickname: Apelido
+  birth_date: Data de Nascimento
+  avatar: Foto de Perfil
+  gender: Gênero
+  type_a_name_or_nickname: Digite um nome ou apelido
+  age: Idade
+  years: Anos
+  login: Apelido ou Email
+  errors:
+      messages:
+        not_saved: Não deu pra salvar :(
+

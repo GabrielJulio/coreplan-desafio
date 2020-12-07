@@ -1,0 +1,21 @@
+en:
+  app_description: You can ask questions to others anonymously.
+  languages: languages
+  password_hint: leave it blank if you don't want to change it
+  password_minimum: caracteres no mínimo
+  confirm_password_hint: we need your password to approve the changes
+  welcome: Welcome
+  my_account: My Profile
+  search: Search
+  refresh: Refresh
+  my_questions: My Questions
+  feedback: Feedback
+  edit_account: Edit Profile
+  sign_in: Sign In
+  sign_up: Sign Up
+  sign_out: Sign Out
+  home_page: Home Page
+  forgot_password: Forgot your password?
+  type_a_name_or_nickname: Type a name or nickname
+  login: Nickname or Email
+  update: Update

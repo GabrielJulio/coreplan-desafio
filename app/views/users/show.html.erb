@@ -1,0 +1,30 @@
+<div class="row"></div>
+<div class="row">
+  <div class="col s10 offset-s1 m8 offset-m2 l12">
+    <div class="card horizontal">
+      <div class="card-image">
+        <%= image_tag @user.avatar_thumbnail, :style => "margin-left: 1%;border-radius: 50%;" %>
+      </div>
+      <div class="card-stacked">
+        <div class="card-content center">
+          <p><b><%= t(:nickname) %>:</b> <%= @user.nickname %></p>
+          <% if current_user %>
+            <p><b><%= t(:full_name) %>:</b> <%= @user.full_name %></p>
+            <p><b><%= t(:age) %>:</b> <%= age(@user.birth_date) %> <%= :years %></p>
+            <p><b><%= t(:gender) %>:</b>
+              <% if @user.gender.nil? %>
+                Não Informado
+              <% else %>
+                <%= t(@user.gender) %>
+              <% end %>
+            </p>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<br>
+
+<%= link_to t(:back), :back, :class => 'btn red lighten-1 right' %>

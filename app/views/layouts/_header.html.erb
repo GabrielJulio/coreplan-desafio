@@ -1,0 +1,81 @@
+<header>
+    <div class="navbar-fixed">
+        <nav class="blue darken-1">
+            <div class="nav-wrapper">
+                <ul class="right">
+                    <% if current_user %>
+                    <li class="sidenav-trigger" data-target="slide-account">
+                        <a href="#" class="btn-small grey darken-4">
+                            <i class="material-icons">menu</i>
+                        </a>
+                    </li>
+                <% else %>
+                    <li class="hide-on-med-and-down"><%= link_to new_user_registration_path do %>
+                        <i class="material-icons left">control_point</i> <%= t(:sign_up) %>
+                    <% end %></li>
+                    <li class="hide-on-med-and-down"><%= link_to new_user_session_path do %>
+                        <i class="material-icons left">supervisor_account</i> <%= t(:sign_in) %>
+                    <% end %></li>
+                    <li class="sidenav-trigger hide-on-large-only" data-target="slide-account">
+                        <a href="#" class="btn-small grey darken-4">
+                            <i class="material-icons">menu</i>
+                        </a>
+                    </li>
+                <% end %>
+                </ul>
+                <%= link_to root_path, :class => 'brand-logo center' do %>
+                    <i class="material-icons">message</i><%= app_name %>
+                <% end %>
+            </div>
+        </nav>
+    </div>
+
+    <ul id="slide-account" class="sidenav">
+        <% if current_user %>
+            <li><div class="user-view">
+            <div class="background">
+                <%= link_to user_path(current_user.nickname) do %>
+                    <%= image_tag 'background_profile.jpg' %>
+                <% end %>
+            </div>
+            <%= link_to user_path(current_user.nickname) do %>
+                <%= image_tag current_user.avatar_thumbnail, :class => 'circle right' %>
+            <% end %>
+            <%= link_to user_path(current_user.nickname) do %>
+                <span class="white-text name"><%= current_user.full_name %></span>
+            <% end %>
+            <%= link_to user_path(current_user.nickname) do %>
+                <span class="white-text email"><%= current_user.email %></span>
+            <% end %>
+            </div></li>
+            <li><%= link_to '#', :class => 'waves-effect' do %>
+                <i class="material-icons">chat_bubble</i><%= t(:my_questions) %>
+            <% end %></li>
+            <li><%= link_to '#', :class => 'waves-effect' do %>
+                <i class="material-icons">question_answer</i><%= t(:feedback) %>
+            <% end %></li>
+            <li><div class="divider"></div></li>
+            <li><%= link_to edit_user_registration_path, :class => 'waves-effect' do %>
+                <i class="material-icons">create</i><%= t(:edit_account) %>
+            <% end %></li>
+            <li><%= link_to destroy_user_session_path, :class => 'waves-effect' do %>
+                <i class="material-icons">directions_walk</i><%= t(:sign_out) %>
+            <% end %></li>
+        <% else %>
+            <li><%= link_to new_user_session_path do %>
+                <i class="material-icons">supervisor_account</i> <%= t(:sign_in) %>
+            <% end %></li>
+            <li><%= link_to new_user_registration_path do %>
+                <i class="material-icons">control_point</i> <%= t(:sign_up) %>
+            <% end %></li>
+        <% end %>
+        <div class="divider"></div>
+        <li><a class='dropdown-trigger btn grey darken-4' href='#' data-target='languages'><%= t(:languages) %></a></li>
+
+        <ul id='languages' class='dropdown-content'>
+            <li><%= link_to 'Português', url_for(locale: 'pt-BR') %></li>
+            <li><%= link_to 'English', url_for(locale: 'en') %></li>
+        </ul>
+
+    </ul>
+</header>
