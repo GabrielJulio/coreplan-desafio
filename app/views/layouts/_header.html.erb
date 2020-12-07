@@ -1,0 +1,92 @@
+<header>
+    <div class="navbar-fixed">
+        <nav class="blue darken-1">
+            <div class="nav-wrapper">
+                <ul class="left">
+                    <% if current_user %>
+                    <li class="sidenav-trigger" data-target="slide-account">
+                        <a href="#" class="btn-small cyan darken-1">
+                            <%= t(:welcome) %> <b><%= current_user.nickname %></b>!
+                        </a>
+                    </li>
+                <% else %>
+                    <li class="hide-on-med-and-down"><%= link_to new_user_registration_path do %>
+                        <i class="material-icons left">control_point</i> <%= t(:sign_up) %>
+                    <% end %></li>
+                    <li class="hide-on-med-and-down"><%= link_to new_user_session_path do %>
+                        <i class="material-icons left">supervisor_account</i> <%= t(:sign_in) %>
+                    <% end %></li>
+                <% end %>
+
+                </ul>
+                <%= link_to root_path, :class => 'brand-logo center' do %>
+                    <i class="material-icons">message</i><%= app_name %>
+                <% end %>
+                <a href="#" data-target="slide-account" class="sidenav-trigger right">
+                    <i class="material-icons">menu</i>
+                </a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="#"><i class="material-icons">search</i></a></li>
+                    <li><%= link_to '' do %>
+                        <i class="material-icons">refresh</i>
+                    <% end %></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <ul id="slide-account" class="sidenav">
+        <% if current_user %>
+            <li><div class="user-view">
+            <div class="background">
+                <%= link_to user_path(current_user.nickname) do %>
+                    <%= image_tag 'background_profile.jpg' %>
+                <% end %>
+            </div>
+            <%= link_to user_path(current_user.nickname) do %>
+                <%= image_tag current_user.avatar_thumbnail, :class => 'circle right' %>
+            <% end %>
+            <%= link_to user_path(current_user.nickname) do %>
+                <span class="white-text name"><%= current_user.full_name %></span>
+            <% end %>
+            <%= link_to user_path(current_user.nickname) do %>
+                <span class="white-text email"><%= current_user.email %></span>
+            <% end %>
+            </div></li>
+            <li><%= link_to '#', :class => 'waves-effect' do %>
+                <i class="material-icons">chat_bubble</i><%= t(:my_questions) %>
+            <% end %></li>
+            <li><%= link_to '#', :class => 'waves-effect' do %>
+                <i class="material-icons">question_answer</i><%= t(:feedback) %>
+            <% end %></li>
+            <li><div class="divider"></div></li>
+            <li><%= link_to edit_user_registration_path, :class => 'waves-effect' do %>
+                <i class="material-icons">create</i><%= t(:edit_account) %>
+            <% end %></li>
+            <li><%= link_to destroy_user_session_path, :class => 'waves-effect' do %>
+                <i class="material-icons">directions_walk</i><%= t(:sign_out) %>
+            <% end %></li>
+            <li><div class="divider"></div></li>
+        <% end %>
+        <li><a href="#"><i class="material-icons">search</i><%= t(:search) %></a></li>
+        <li><%= link_to '' do %>
+            <i class="material-icons">refresh</i><%= t(:refresh) %>
+        <% end %></li>
+        <% unless current_user %>
+            <li><%= link_to new_user_session_path do %>
+                <i class="material-icons">supervisor_account</i> <%= t(:sign_in) %>
+            <% end %></li>
+            <li><%= link_to new_user_registration_path do %>
+                <i class="material-icons">control_point</i> <%= t(:sign_up) %>
+            <% end %></li>
+        <% end %>
+        <div class="divider"></div>
+        <li><a class='dropdown-trigger btn' href='#' data-target='languages'><%= t(:languages) %></a></li>
+
+        <ul id='languages' class='dropdown-content'>
+            <li><%= link_to 'Português', root_path(locale: 'pt-BR') %></li>
+            <li><%= link_to 'English', root_path(locale: 'en') %></li>
+        </ul>
+
+    </ul>
+</header>

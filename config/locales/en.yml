@@ -1,2 +1,17 @@
 en:
-  hello: "Hello world"
+  app_description: You can ask questions to others anonymously.
+  languages: languages
+  password_hint: leave it blank if you don't want to change it
+  password_minimum: caracteres no mínimo
+  confirm_password_hint: nós precisamos da sua senha atual para confirmar as alterações
+  welcome: Welcome
+  my_account: My Profile
+  search: Search
+  refresh: Refresh
+  my_questions: My Questions
+  feedback: Feedback
+  edit_account: Edit Profile
+  sign_in: Sign In
+  sign_up: Sign Up
+  sign_out: Sign Out
+  home_page: Home Page

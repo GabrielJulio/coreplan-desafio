@@ -1,0 +1,18 @@
+pt-BR:
+  activerecord:
+    models:
+      user:
+        one: Conta
+    attributes:
+      user:
+        id: Código
+        full_name: Nome Completo
+        nickname: Apelido
+        birth_date: Data de Nascimento
+        avatar: Foto de Perfil
+        gender: Gênero
+        password: Senha
+        password_confirmation: Confirmar senha
+        current_password: Senha atual
+        updated_at: Atualizado em
+        created_at: Cadastrado em

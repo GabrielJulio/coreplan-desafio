@@ -25,9 +25,9 @@
     ```bash
     docker-compose down
     ```
-- Para executar um comando com rails execute: 
+- Para executar um comandos execute: 
     ```bash
-    docker-compose run app rails <comando>
+    docker-compose run web <comando>
     ```
 - Quer instalou novas gems? Refaça o build.
     ```bash

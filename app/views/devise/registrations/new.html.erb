@@ -1,4 +1,4 @@
-<h2>Sign up</h2>
+<h2 class="center">Sign up</h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
@@ -15,7 +15,7 @@
 
   <div class="field">
     <%= f.label :birth_date %><br />
-    <%= f.date_field :birth_date %>
+    <%= f.date_field :birth_date, :value => "Date.today" %>
   </div>
 
   <div class="field">

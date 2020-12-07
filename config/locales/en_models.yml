@@ -1,0 +1,18 @@
+pt-BR:
+  activerecord:
+    models:
+      user:
+        one: Conta
+    attributes:
+      user:
+        id: Code
+        full_name: Full Name
+        nickname: Nickname
+        birth_date: Birth Date
+        avatar: Profile Picture
+        gender: Gender
+        password: Password
+        password_confirmation: Password confirm
+        current_password: Current password
+        updated_at: updated at
+        created_at: created at

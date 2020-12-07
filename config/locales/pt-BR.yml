@@ -1,2 +1,20 @@
 pt-BR:
-  hello: "Olá mundo"
+  app_description: Você pode fazer pergunta aos outros anônimamente.
+  languages: línguas
+  neutral: Nêutro
+  male: Masculino
+  female: Feminino
+  password_hint: deixe em branco se não quiser alterar
+  password_minimum: caracteres no mínimo
+  confirm_password_hint: nós precisamos da sua senha atual para confirmar as alterações
+  welcome: Bem-vindo(a)
+  my_account: Meu Perfil
+  search: Pesquisar
+  refresh: Atualizar
+  my_questions: Minhas Perguntas
+  feedback: Feedback
+  edit_account: Editar Perfil
+  sign_in: Entrar
+  sign_up: Se cadastrar
+  sign_out: Sair
+  home_page: Página Inicial
