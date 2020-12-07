@@ -1,25 +1,25 @@
-<h2>Edit <%= resource_name.to_s.humanize %></h2>
+<h2 class="center"><%= t(:my_account) %></h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
+  <%= render "devise/shared/error_messages", resource: resource, :class => 'red-text' %>
 
   <div class="field">
-    <%= f.label :full_name %><br />
+    <%= f.label :full_name %><br/>
     <%= f.text_field :full_name %>
   </div>
 
   <div class="field">
-    <%= f.label :nickname %><br />
+    <%= f.label :nickname %><br/>
     <%= f.text_field :nickname %>
   </div>
 
   <div class="field">
-    <%= f.label :birth_date %><br />
+    <%= f.label :birth_date %><br/>
     <%= f.date_field :birth_date %>
   </div>
 
   <div class="field">
-    <%= f.label :email %><br />
+    <%= f.label :email %><br/>
     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
   </div>
 
@@ -28,42 +28,38 @@
   <% end %>
   
   <div class="field">
-    <%= f.label 'Profile Picture' %><br />
-    <%= image_tag(resource.avatar_thumbnail) if resource.avatar.attached? %>
+    <%= f.label :avatar %><br/>
+    <%= image_tag(resource.avatar_thumbnail) if resource.avatar.attached? %><br/>
     <%= f.file_field :avatar %>
   </div>
+  <br/>
 
   <div class="field">
-    <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
+    <%= f.label :password %> <i>(<%= t(:password_hint) %>)</i><br/>
     <%= f.password_field :password, autocomplete: "new-password" %>
     <% if @minimum_password_length %>
-      <br />
-      <em><%= @minimum_password_length %> characters minimum</em>
+      <br/>
+      <em><%= @minimum_password_length %> <%= t(:password_minimum) %></em>
     <% end %>
   </div>
 
   <div class="field">
-    <%= f.label :password_confirmation %><br />
+    <%= f.label :password_confirmation %><br/>
     <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
   </div>
 
   <div class="field">
-    <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
+    <%= f.label :current_password %> <i>(<%= t(:confirm_password_hint) %>)</i><br/>
     <%= f.password_field :current_password, autocomplete: "current-password" %>
   </div>
 
-  <div class="field">
-    <%= f.label :gender %><br />
-    <%= f.select :gender, User.genders.keys.to_a %><br/>
+  <div class="field input-field">
+    <%= f.select :gender, User.genders.keys.collect {|g| [t(g)]} %>
+    <%= f.label :gender %>
   </div>
 
   <div class="actions">
-    <%= f.submit "Update" %>
+    <%= f.submit "Update", :class => 'btn left' %>  <%= link_to "Back", :back, :class => 'btn right red' %>
   </div>
 <% end %>
-
-<h3>Cancel my account</h3>
-
-<p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
-
-<%= link_to "Back", :back %>
+<div class="row"></div>

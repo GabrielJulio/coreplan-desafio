@@ -1,0 +1,24 @@
+<footer class="page-footer blue">
+    <div class="container">
+    <div class="row">
+        <div class="col l6 s12">
+        <h5 class="white-text"><%= app_name %></h5>
+        <p class="grey-text text-lighten-4"><%= t(:app_description) %></p>
+        </div>
+        <div class="col l4 offset-l2 s12">
+        <h5 class="white-text">Links</h5>
+        <ul>
+            <li><%= link_to t(:home_page), root_path, :class => "grey-text text-lighten-3" %></li>
+            <% if current_user %>
+                <li><%= link_to t(:my_account), users_path(current_user.nickname), :class => "grey-text text-lighten-3" %></li>
+            <% end %>
+        </ul>
+        </div>
+    </div>
+    </div>
+    <div class="footer-copyright">
+    <div class="container">
+    © 2020 Copyright <%= app_name %>
+    </div>
+    </div>
+</footer>
