@@ -42,8 +42,8 @@
     ```
 
 ### Imagens
-<img src="https://github.com/GabrielJulio/coreplan-desafio/blob/repo_images/main_screen.jpg" width="800" height="500"/>
-<img src="https://github.com/GabrielJulio/coreplan-desafio/blob/repo_images/login_screen.jpg" width="800" height="500"/>
-<img src="https://github.com/GabrielJulio/coreplan-desafio/blob/repo_images/no_avatar.jpg" width="800" height="500"/>
-<img src="https://github.com/GabrielJulio/coreplan-desafio/blob/repo_images/search_with_avatar.jpg" width="800" height="500"/>
-<img src="https://github.com/GabrielJulio/coreplan-desafio/blob/repo_images/errors.jpg" width="800" height="500"/>
+<img src="https://github.com/GabrielJulio/coreplan-desafio/blob/master/repo_images/main_screen.jpg" width="800" height="500"/>
+<img src="https://github.com/GabrielJulio/coreplan-desafio/blob/master/repo_images/login_screen.jpg" width="800" height="500"/>
+<img src="https://github.com/GabrielJulio/coreplan-desafio/blob/master/repo_images/no_avatar.jpg" width="800" height="500"/>
+<img src="https://github.com/GabrielJulio/coreplan-desafio/blob/master/repo_images/search_with_avatar.jpg" width="800" height="500"/>
+<img src="https://github.com/GabrielJulio/coreplan-desafio/blob/master/repo_images/errors.png" width="800" height="500"/>
