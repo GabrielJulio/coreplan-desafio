@@ -1,32 +1,30 @@
-<p id="notice"><%= notice %></p>
+<div class="row"></div>
+<div class="row">
+  <div class="col s10 offset-s1 m8 offset-m2 l12">
+    <div class="card horizontal">
+      <div class="card-image">
+        <%= image_tag @user.avatar_thumbnail, :style => "margin-left: 1%;border-radius: 50%;" %>
+      </div>
+      <div class="card-stacked">
+        <div class="card-content center">
+          <p><b><%= t(:nickname) %>:</b> <%= @user.nickname %></p>
+          <% if current_user %>
+            <p><b><%= t(:full_name) %>:</b> <%= @user.full_name %></p>
+            <p><b><%= t(:age) %>:</b> <%= age(@user.birth_date) %> <%= :years %></p>
+            <p><b><%= t(:gender) %>:</b>
+              <% if @user.gender.nil? %>
+                Não Informado
+              <% else %>
+                <%= t(@user.gender) %>
+              <% end %>
+            </p>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
-<p id="notice"><%= notice %></p>
+<br>
 
-<table>
-  <thead>
-    <tr>
-      <td><b>Profile Picture</b></td>
-      <td><b>Nickname</b></td>
-      <% if current_user %>
-        <td><b>Full Name</b></td>
-        <td><b>Age</b></td>
-        <td><b>Gender</b></td>
-      <% end %>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-        <td><%= image_tag @user.avatar_thumbnail %></td>
-        <td><%= @user.nickname %></td>
-        <% if current_user %>
-            <td><%= @user.full_name %></td>
-            <td><%= @user.birth_date %></td>
-            <td><%= @user.gender %></td>
-        <% end %>
-    </tr>
-  </tbody>
-</table>
-
-<%= link_to 'Back', users_path %>
+<%= link_to t(:back), :back, :class => 'btn red lighten-1 right' %>

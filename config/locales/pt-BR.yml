@@ -29,6 +29,8 @@ pt-BR:
   avatar: Foto de Perfil
   gender: Gênero
   type_a_name_or_nickname: Digite um nome ou apelido
+  age: Idade
+  years: Anos
   errors:
       messages:
         not_saved: Não deu pra salvar :(
